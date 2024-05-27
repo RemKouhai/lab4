@@ -47,49 +47,44 @@ namespace LAB4_BAI3
            
             string url = textBox1.Text;
             string filePath = textBox2.Text;
-            string htmlContent = DownloadWebPage(url);
 
-           
-            SaveHtmlToFile(htmlContent, filePath);
 
-            
-            richTextBox1.Text = htmlContent;
+
+            LoadTextFromFile(filePath, url);
+
+            richTextBox1.Text = File.ReadAllText(filePath);
 
         }
 
-
-
-        private string DownloadWebPage(string url)
+        private string DownloadString(string url)
         {
             try
             {
-                using (WebClient client = new WebClient())
-                {
-                    return client.DownloadString(url);
-                }
-            } 
-            catch 
+                WebClient client = new WebClient();
+                return client.DownloadString(url);
+            }
+            catch (Exception ex) 
             {
                 MessageBox.Show("Kiểm tra lại URL", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return "";
             }
+            
         }
-
-        private void SaveHtmlToFile(string htmlContent, string filePath)
+        private void LoadTextFromFile(string filePath,string url)
         {
             try
             {
-                //char[] invalidChars = Path.GetInvalidPathChars();
-                //filePath = new string(filePath.Where(c => !invalidChars.Contains(c)).ToArray());
+                File.WriteAllText(filePath, DownloadString(url));
 
-
-                File.WriteAllText(filePath, htmlContent);
             }
-            catch
+            catch (IOException ex)
             {
-                MessageBox.Show("Kiểm tra lại đường dẫn file ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+                MessageBox.Show($"Lỗi đọc file: {ex.Message}");
             }
         }
+
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -97,7 +92,7 @@ namespace LAB4_BAI3
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.InitialDirectory = "/";
-                openFileDialog.Filter = "All files (*.*)|*.*";
+                openFileDialog.Filter = "Text Files (*.txt)|*.txt";
                 openFileDialog.FilterIndex = 2;
                 openFileDialog.RestoreDirectory = true;
                 openFileDialog.CheckFileExists = false;
