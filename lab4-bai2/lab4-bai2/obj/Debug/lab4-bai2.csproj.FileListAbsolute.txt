@@ -1,0 +1,10 @@
+D:\ltm\TH\lab4\lab4-bai2\lab4-bai2\bin\Debug\lab4-bai2.exe.config
+D:\ltm\TH\lab4\lab4-bai2\lab4-bai2\bin\Debug\lab4-bai2.exe
+D:\ltm\TH\lab4\lab4-bai2\lab4-bai2\bin\Debug\lab4-bai2.pdb
+D:\ltm\TH\lab4\lab4-bai2\lab4-bai2\obj\Debug\lab4-bai2.csproj.AssemblyReference.cache
+D:\ltm\TH\lab4\lab4-bai2\lab4-bai2\obj\Debug\lab4_bai2.Form1.resources
+D:\ltm\TH\lab4\lab4-bai2\lab4-bai2\obj\Debug\lab4_bai2.Properties.Resources.resources
+D:\ltm\TH\lab4\lab4-bai2\lab4-bai2\obj\Debug\lab4-bai2.csproj.GenerateResource.cache
+D:\ltm\TH\lab4\lab4-bai2\lab4-bai2\obj\Debug\lab4-bai2.csproj.CoreCompileInputs.cache
+D:\ltm\TH\lab4\lab4-bai2\lab4-bai2\obj\Debug\lab4-bai2.exe
+D:\ltm\TH\lab4\lab4-bai2\lab4-bai2\obj\Debug\lab4-bai2.pdb
